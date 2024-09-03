@@ -1,0 +1,30 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Input from '@/components/form/Input.astro';
+---
+
+<Layout title="Consulta los datos de pago de tu préstamo | Baubap">
+	<main class="h-screen md:bg-neutral-100 md:flex md:flex-col justify-center items-center">
+		<img class="hidden md:block mx-auto mb-12" src="/logo.svg" alt="Baubap Logo" width="105">
+		<!-- Main Card -->
+		<div class="h-screen bg-white flex flex-col md:items-center pt-8 pb-12 px-4 md:h-auto md:card md:w-[658px]">
+			<img class="md:hidden mx-auto mb-12" src="/logo.svg" alt="Baubap Logo" width="105">
+
+			<div class="mx-auto max-w-[278px] text-center md:max-w-[514px]">
+				<p class="font-semibold text-2xl mb-3 md:text-3xl">Consulta los datos de pago de tu préstamo</p>
+				<p class="text-neutral-600">Puedes ingresar con tu número de celular registrado o tu CURP</p>
+			</div>
+
+			<div class="max-w-80 mt-16 md:max-w-[443px] md:w-[443px]">
+				<Input placeholder="Número de celular o CURP" maxlength={20} />
+				<p class="text-xs pt-1 text-neutral-700"> Número de celular a 10 dígitos o CURP</p>
+			</div>
+	
+			<div class="mt-auto md:mt-7 md:w-[443px]">
+				<button class="btn-primary w-full">Consultar mis datos de pago</button>
+				<p class="text-center text-sm text-neutral-700 mt-3">¿No recuerdas tu CURP? <a class="text-primary-500" href="https://www.gob.mx/curp/"> Consultala aquí</a></p>
+			</div>
+		</div>
+	</main>
+</Layout>
+

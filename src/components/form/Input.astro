@@ -1,0 +1,9 @@
+---
+interface Props extends astroHTML.JSX.InputHTMLAttributes {}
+
+const { ...attrs } = Astro.props
+---
+<input
+  class="py-4 px-2 bg-neutral-100 text-neutral-800 w-full rounded-tl-lg rounded-t-lg outline-none"
+  {...attrs}
+  >

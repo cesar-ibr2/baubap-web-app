@@ -1,0 +1,61 @@
+---
+const { SEO_title, SEO_description, SEO_url, SEO_author, SEO_image } =
+Astro.props
+---
+<title>{SEO_title}</title>
+<meta name="description" content={SEO_description}>
+<link rel="canonical" href={SEO_url}>
+<meta itemprop="name" content={SEO_title} />
+<meta itemprop="url" content={SEO_url} />
+<meta charset="UTF-8" />
+
+<meta
+  http-equiv="Content-Security-Policy"
+  content="
+    default-src 'none';
+    media-src 'self' https://www.youtube.com/;
+    connect-src 'self' api-dev.baubap.com api.baubap.com o151190.ingest.sentry.io/api/;
+    frame-src 'self' www.googletagmanager.com https://www.tiktok.com/ https://www.loom.com/ https://docs.google.com https://www.youtube.com/ https://www.youtube-nocookie.com/;
+    img-src 'self' data: baubap.s3.us-east-2.amazonaws.com downloads.intercomcdn.com blog.baubap.com;
+    script-src 'self' 'unsafe-inline' https://www.tiktok.com/ https://lf16-tiktok-web.ttwstatic.com/ https://lf16-tiktok-web.ttwstatic.com/ js.sentry-cdn.com browser.sentry-cdn.com;
+    style-src 'self' 'unsafe-inline' fonts.googleapis.com https://lf16-tiktok-web.ttwstatic.com/obj/tiktok-web-us/tiktok/falcon/embed/embed_lib_v1.0.11.css;
+    font-src 'self' fonts.gstatic.com;
+    object-src 'none';
+    manifest-src 'self';
+    worker-src 'self' blob:;
+  "
+/>
+
+<!-- Favicon Links -->
+<link rel="icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5f26e0">
+
+<!-- Additional Meta Tags -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="author" content={SEO_author}>
+<meta name="generator" content={SEO_author}>
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content={SEO_title}>
+<meta name="twitter:description" content={SEO_description}>
+<meta name="twitter:site" content="@baubapmx">
+<meta name="twitter:creator" content="@baubapmx">
+<meta name="twitter:image" content={SEO_image}>
+<meta property="og:title" content={SEO_title}>
+<meta property="og:site_name" content={SEO_title}>
+<meta property="og:description" content={SEO_description}>
+<meta property="og:url" content={SEO_url}>
+<meta property="og:image" content={SEO_image}>
+<meta property="og:image:secure_url" content={SEO_image}>
+<meta property="og:image:width" content="512">
+<meta property="og:image:height" content="512">
+<meta property="og:type" content="website">
+<meta property="fb:pages" content="104796584865174">
+<meta name="msapplication-TileColor" content="#5f26e0">
+<meta name="theme-color" content="#ffffff">
+<meta name="msapplication-TileImage" content="https://www.baubap.com/img/baubap-circle-logo.png">

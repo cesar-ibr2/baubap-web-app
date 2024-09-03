@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.btn-primary {
+  @apply bg-primary py-3 px-6 text-white rounded-xl text-sm text-center;
+}
+
+@layer utilities {
+  .card {
+    @apply rounded-3xl bg-white py-[60px] px-[72px];
+  }
+}

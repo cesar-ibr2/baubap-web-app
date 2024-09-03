@@ -1,0 +1,42 @@
+---
+import "../styles.css"
+import SEO from "./SEO.astro"
+
+interface Props {
+	title: string;
+	description?: string;
+	author?: string;
+	url?: string;
+	image?: string;
+}
+
+const {
+  title = "Préstamos en línea desde tu celular, sin buró de crédito | Baubap",
+  description = "Préstamos en línea desde $500 hasta $5,000 de manera ágil y sencilla, las 24 horas, los 365 días del año. Sin consultar buró de crédito y desde tu celular.",
+  url = "https://baubap.com",
+  author = "Baubap S.A.P.I. de C.V.",
+  image = "https://www.baubap.com/img/prestamos-en-linea-mas-cerca-sin-buro-baubap.png",
+} = Astro.props
+---
+
+<!doctype html>
+<html lang="es-MX">
+	<head>
+		<SEO
+      SEO_title={title}
+      SEO_description={description}
+      SEO_url={url}
+      SEO_author={author}
+      SEO_image={image}
+    />
+
+		<!-- Onest Font -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&display=swap" rel="stylesheet">
+		<meta name="generator" content={Astro.generator} />
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
